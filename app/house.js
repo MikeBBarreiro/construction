@@ -21,15 +21,17 @@ House.prototype.cost = function(){
 
   for(var i = 0; i < this.rooms.length; i++){
   sum += this.rooms[i].cost;
-  
   }
 return sum;
 };
+House.prototype.h1Cost = function() {
+    var total = 0;
+      for(var i = 0; i < this.rooms.length; i++){
+            total += this.rooms[i].cost();
+              }
 
-House.prototype.cost = function(){
-
+        return total;
 };
-
 
 module.exports = House;
 
